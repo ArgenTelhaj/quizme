@@ -23,24 +23,29 @@ public class QuizServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         HttpSession session = req.getSession(true);
+        res.setContentType("text/html");
+        PrintWriter writer = res.getWriter();
+        writer.println(String.format("RETURNED ID   : %s", req.getParameter("quizTypeID")));
 
        // res.setHeader("Set-Cookie","JSESSIONID=" + session.getId());
-        if (session.getAttribute("quiz") == null) {
-            int id = Integer.parseInt(req.getParameter("Id"));
-            //String parameter = req.getParameter("quizType");
-
-            //int id = 2 ;
-            //int page = Integer.parseInt(req.getParameter("page"));
-            QuizDao dao = new QuizDao();
-            Quiz quiz = dao.getQuiz(id);
-            session.setAttribute("quiz", quiz);
-            session.setAttribute("page",1);
-        } else {
-            session.setAttribute("page", req.getParameter("page"));
-            session.setAttribute("questionId", req.getParameter("questionId"));
-            System.out.println(req.getParameter("questionId"));
-        }
-        req.getRequestDispatcher("/quiz-screen").forward(req,res);
+//        if (session.getAttribute("quiz") == null) {
+//
+//            //int id = Integer.parseInt(req.getParameter("quizTypeID"));
+//            //String parameter = req.getParameter("quizType");
+//
+//
+//            int id = 2 ;
+//            //int page = Integer.parseInt(req.getParameter("page"));
+//            QuizDao dao = new QuizDao();
+//            Quiz quiz = dao.getQuiz(id);
+//            session.setAttribute("quiz", quiz);
+//            session.setAttribute("page",1);
+//        } else {
+//            session.setAttribute("page", req.getParameter("page"));
+//            session.setAttribute("questionId", req.getParameter("questionId"));
+//            System.out.println(req.getParameter("questionId"));
+//        }
+//        req.getRequestDispatcher("/quiz-screen").forward(req,res);
     }
 
     @Override

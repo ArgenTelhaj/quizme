@@ -10,6 +10,14 @@
     <name>quizme</name>
     <packaging>war</packaging>
 
+
+    <repositories>
+        <repository>
+            <id>webjars</id>
+            <url>https://repo.webjars.org</url>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -36,6 +44,11 @@
             <version>1.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.6.0</version>
+        </dependency>
 
 
 

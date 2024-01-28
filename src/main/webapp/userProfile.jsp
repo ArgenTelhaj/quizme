@@ -6,7 +6,7 @@
 </head>
 <jsp:include page="nav.jsp" flush="true" />
 <body>
-    <h1 style="color: #04AA6D"> Login Successfull</h1>
+    <h1 style="color: #04AA6D"> Login Successfully</h1>
     <form action="${pageContext.request.contextPath}/quiz" method="POST" >
 
 
@@ -14,8 +14,16 @@
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <h2 class="card-title" >JavaServer Pages</h2>
+<%--                            <input  Name= "quizTypeID" style="display: none" value="1">--%>
+                        <button type="submit" class="btn btn-primary" name ="quizTypeID" >Start</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Java Servlet</h2>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
@@ -23,17 +31,7 @@
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <h2 class="card-title">Java Hibernate</h2>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
