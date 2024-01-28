@@ -33,8 +33,8 @@
 <body>
 <div class="hero-image">
     <div class="hero-text">
-        <h1>Welcome to the Quiz App</h1>
-        <h3>Start a quiz and increase your knowledge!</h3>
+        <h1>Quizz</h1>
+        <h3>Quizzoje veten po deshe </h3>
         <br>
         <br>
         <div class="login-form">
@@ -50,7 +50,7 @@
                     <button type="submit" class="btn btn-primary btn-block">Log in</button>
                 </div>
             </form>
-            <p class="text-center"><a href="${pageContext.request.contextPath}/registerForm.jsp">Create an Account</a></p>
+            <p class="text-center"><a href="${pageContext.request.contextPath}/register-form">Create an Account</a></p>
         </div>
     </div>
 </div>

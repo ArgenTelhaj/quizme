@@ -29,23 +29,7 @@ public class JsonConverter {
         return jsonObject.get("quiz").toString();
 
 
-        /*
-        //Creating the ObjectMapper object
-        ObjectMapper mapper = new ObjectMapper();
-        //Converting the Object to JSONString
-        String jsonString = "";
-        try {
-            jsonString = mapper.writeValueAsString(quiz);
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        } catch (JsonGenerationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        return jsonString;
-        * */
     }
 
 }

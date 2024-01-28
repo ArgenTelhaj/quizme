@@ -14,7 +14,7 @@ public class ProfileServlet extends HttpServlet {
         PrintWriter writer = resp.getWriter();
 
         HttpSession oldSession = req.getSession(false);
-        if (oldSession == null) {
+        if (oldSession == null || oldSession.getAttribute("username") == null) {
             req.getRequestDispatcher("/loginForm.jsp").include(req, resp);
             writer.print(
                     "<div class='container'>" +

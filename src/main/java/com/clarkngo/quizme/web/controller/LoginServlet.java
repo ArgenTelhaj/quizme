@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {
 
             // setting session to expire in 10 minutes
             newSession.setMaxInactiveInterval(10 * 60);
-            res.sendRedirect(req.getContextPath() + "/home");
+            res.sendRedirect(req.getContextPath() + "/profile");
         } else {
             res.setContentType("text/html");
             PrintWriter writer = res.getWriter();

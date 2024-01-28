@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -15,9 +16,13 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
-                <li><a href="${pageContext.request.contextPath}/loginForm.jsp">Login</a></li>
-                <li><a href="${pageContext.request.contextPath}/registerForm.jsp">Registration</a></li>
+                <li><a href="${pageContext.request.contextPath}/login-form">Login</a></li>
+                <li><a href="${pageContext.request.contextPath}/register-form">Registration</a></li>
+                <c:if test="${false == true}">
+                    <li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
+                </c:if>
             </ul>
+
         </div>
     </nav>
 </body>

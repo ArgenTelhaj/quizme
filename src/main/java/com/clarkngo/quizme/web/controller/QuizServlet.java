@@ -2,6 +2,7 @@ package com.clarkngo.quizme.web.controller;
 
 import com.clarkngo.quizme.web.dao.QuizDao;
 import com.clarkngo.quizme.web.dao.QuizTypeDao;
+import com.clarkngo.quizme.web.dao.UserDao;
 import com.clarkngo.quizme.web.domain.Quiz;
 import com.clarkngo.quizme.web.domain.QuizType;
 
@@ -14,14 +15,22 @@ import java.util.List;
 
 @WebServlet(name = "QuizServlet", value = "/quiz")
 public class QuizServlet extends HttpServlet {
+    private QuizDao quizDao;
+
+    public void init() {
+        this.quizDao = new QuizDao();
+    }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         HttpSession session = req.getSession(true);
 
        // res.setHeader("Set-Cookie","JSESSIONID=" + session.getId());
         if (session.getAttribute("quiz") == null) {
-            int id = Integer.parseInt(req.getParameter("quizTypeId"));
-            int page = Integer.parseInt(req.getParameter("page"));
+            int id = Integer.parseInt(req.getParameter("Id"));
+            //String parameter = req.getParameter("quizType");
+
+            //int id = 2 ;
+            //int page = Integer.parseInt(req.getParameter("page"));
             QuizDao dao = new QuizDao();
             Quiz quiz = dao.getQuiz(id);
             session.setAttribute("quiz", quiz);

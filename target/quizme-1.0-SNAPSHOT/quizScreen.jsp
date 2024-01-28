@@ -129,7 +129,7 @@
                     this.showResult = function(scr) {
                         $("#result").addClass('result');
                         $("#result").html("<h1 class='res-header'>Total Score: &nbsp;" + scr  + '/' + totalque + "</h1>");
-                        $("#result").append('<h3><a href="http://localhost:8080/app/feedback-form">Give a Feedback</a></h3>');
+                        //$("#result").append('<h3><a href="http://localhost:8080/app/feedback-form">Give a Feedback</a></h3>');
 
 
                         $("#result").append('<br>');
