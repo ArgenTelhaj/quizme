@@ -2,9 +2,9 @@ USE quizdb;
 
 INSERT INTO user (Name, Email, Password)
 VALUES
-	('Shawn', 's@s.com', '1234'),
-	('Jack', 'j@j.com','4321'),
-	('Angelina', 'a@a.com','3281')
+	('Test', 't@t.com', '1234'),
+	('Erta', 'e@e.com','1234'),
+	('Argen', 'a@a.com','1234')
 ;
 
 INSERT INTO quiztype (Name, Description)
